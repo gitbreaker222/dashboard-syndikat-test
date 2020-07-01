@@ -1,8 +1,6 @@
 import React from 'react';
 
 export function Format(props) {
-  console.log(props);
-
   const {
     children,
     json = false,
