@@ -1,0 +1,11 @@
+.Dashboard main.--isDetailsOpen {
+  filter: blur(1px)
+}
+
+.Dashboard .ObjectDetails {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  left: 1rem;
+}

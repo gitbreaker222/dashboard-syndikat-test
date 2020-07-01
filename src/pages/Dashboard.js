@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import { cssIf } from '../service/util'
 import { queryData } from '../service/data'
-import { Format } from '../components/format/Format'
+import { ObjectDetails } from '../components/objectDetails/ObjectDetails'
+import './Dashboard.css';
 
 const cleanupPlaceholder = () => { }
 
 export function Dashboard() {
   const [data, setData] = useState(null);
+  const [detailsData, setDetailsData] = useState({ id: 0 })
 
   useEffect(() => {
     if (!data) {
@@ -17,11 +20,14 @@ export function Dashboard() {
 
   return (
     <div className="Dashboard">
-      <header className="App-header">
-        {data && (
-          <Format json>{data}</Format>
-        )}
-      </header>
+      <main className={`
+        ${cssIf(detailsData, '--isDetailsOpen')}
+        `}>
+        dashboard with list of objects
+      </main>
+      {!!detailsData && (
+        <ObjectDetails objectData={detailsData} />
+      )}
     </div>
   );
 }
