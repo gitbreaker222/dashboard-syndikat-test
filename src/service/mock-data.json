@@ -1,0 +1,236 @@
+{
+  "objects": [
+    {
+      "id": 0,
+      "name": "OG-2020",
+      "date-until": "2020-05-20",
+      "revenue": 24000,
+      "revenue-percent": 50.0,
+      "processed-old-revenue-percent": 97.0,
+      "processed-old-revenue-n1": 2050.0,
+      "processed-old-revenue-n2": 9.43,
+      "customers-percent": 50.0,
+      "customers": [
+        {
+          "id": 0
+        },
+        {
+          "id": 1
+        },
+        {
+          "id": 2
+        },
+        {
+          "id": 3
+        },
+        {
+          "id": 4
+        },
+        {
+          "id": 5
+        },
+        {
+          "id": 6
+        },
+        {
+          "id": 7
+        },
+        {
+          "id": 8
+        },
+        {
+          "id": 9
+        },
+        {
+          "id": 10
+        },
+        {
+          "id": 11
+        },
+        {
+          "id": 12
+        },
+        {
+          "id": 13
+        },
+        {
+          "id": 14
+        },
+        {
+          "id": 15
+        },
+        {
+          "id": 16
+        },
+        {
+          "id": 17
+        },
+        {
+          "id": 18
+        },
+        {
+          "id": 19
+        },
+        {
+          "id": 20
+        },
+        {
+          "id": 21
+        },
+        {
+          "id": 22
+        },
+        {
+          "id": 23
+        },
+        {
+          "id": 24
+        },
+        {
+          "id": 25
+        },
+        {
+          "id": 26
+        },
+        {
+          "id": 27
+        },
+        {
+          "id": 28
+        },
+        {
+          "id": 29
+        },
+        {
+          "id": 30
+        },
+        {
+          "id": 31
+        },
+        {
+          "id": 32
+        },
+        {
+          "id": 33
+        },
+        {
+          "id": 34
+        },
+        {
+          "id": 35
+        },
+        {
+          "id": 36
+        },
+        {
+          "id": 37
+        },
+        {
+          "id": 38
+        },
+        {
+          "id": 39
+        },
+        {
+          "id": 40
+        },
+        {
+          "id": 41
+        },
+        {
+          "id": 42
+        },
+        {
+          "id": 43
+        },
+        {
+          "id": 44
+        },
+        {
+          "id": 45
+        },
+        {
+          "id": 46
+        },
+        {
+          "id": 47
+        },
+        {
+          "id": 48
+        },
+        {
+          "id": 49
+        },
+        {
+          "id": 50
+        },
+        {
+          "id": 51
+        },
+        {
+          "id": 52
+        },
+        {
+          "id": 53
+        },
+        {
+          "id": 54
+        },
+        {
+          "id": 55
+        },
+        {
+          "id": 56
+        }
+      ],
+      "customers-new": [
+        {
+          "id": 0
+        },
+        {
+          "id": 1
+        }
+      ],
+      "customers-pop": [
+        {
+          "id": 2
+        }
+      ],
+      "customers-increase": [
+        {
+          "id": 3
+        },
+        {
+          "id": 4
+        }
+      ],
+      "customers-decrease": [
+        {
+          "id": 5
+        },
+        {
+          "id": 6
+        },
+        {
+          "id": 7
+        }
+      ],
+      "customers-clearingissue": [],
+      "revenue-target": 105300.0,
+      "revenue-until-old": -81300.0,
+      "customer-target": 200,
+      "customer-until-old": -144,
+      "customer-open": 143,
+      "online-n": 2000.0,
+      "online-n-customercount": 15,
+      "online-n-percent": 19.76,
+      "omp-n": 1000.0,
+      "omp-n-customer-count": 10,
+      "omp-n-percent": 12,
+      "customer-per-week-av": 19,
+      "customer-per-week-av-revenue": 7000.0,
+      "customer-per-week-av-target": 24,
+      "customer-per-week-av-target-revenue": 13500.0
+    }
+  ]
+}
