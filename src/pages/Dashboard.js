@@ -9,10 +9,8 @@ export function Dashboard() {
 
   useEffect(() => {
     if (!data) {
-      const result = queryData()
-      setData(result)
-      console.log(result);
-
+      queryData()
+        .then(setData)
     }
     return cleanupPlaceholder
   }, [data]);
