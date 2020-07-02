@@ -1,47 +1,47 @@
 /* LAYOUT */
-.ObjectDetails {
+.root {
   display: grid;
   grid-template-rows: repeat(6, 1fr);
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 1px;
 }
 
-.ObjectDetails .box {
+.box {
   padding: 1rem;
   box-shadow: 0 0 0 1px var(--color-c3);
 }
-.ObjectDetails header.box {
+header.box {
   grid-area: 1 / 1 / span 1 / -1
 }
-.ObjectDetails footer.box {
+footer.box {
   grid-area: -2 / 1 / span 1 / -1
 }
 
-.ObjectDetails .box.-a-1 {
+.box.a1 {
   grid-area: 2 / 1 / span 1 / span 2;
 }
-.ObjectDetails .box.-a-2 {
+.box.a2 {
   grid-area: 3 / 1 / span 1 / span 2;
 }
-.ObjectDetails .box.-a-3 {
+.box.a3 {
   grid-area: 4 / 1 / span 1 / span 1;
 }
-.ObjectDetails .box.-a-4 {
+.box.a4 {
   grid-area: 4 / 2 / span 1 / span 1;
 }
 
 
-.ObjectDetails .box.-diagram {
+.box.diagram {
   grid-area: 2 / 3 / span 3 / span 3;
 }
 
-.ObjectDetails .box.-customers {
+.box.customers {
   grid-area: 5 / 1 / span 1 / -1;
 }
 /* LAYOUT END*/
 
 /* STYLE */
-.ObjectDetails {
+.root {
   background: var(--color-bg-normal);
   box-shadow: 0 0 1rem var(--color-a1);
 }
