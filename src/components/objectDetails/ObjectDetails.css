@@ -7,7 +7,6 @@
 }
 
 .ObjectDetails .box {
-  _box-shadow: 0 0 0 1px magenta inset;
   padding: 1rem;
   box-shadow: 0 0 0 1px currentColor;
 }
