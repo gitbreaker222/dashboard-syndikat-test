@@ -14,10 +14,11 @@
   - [x] colors
   - font-families
   - font-sizes
-- [ ] render detail data
+- [x] render detail data
 - [x] add open/close mechanics
 - [ ] add circle % diagram
   - svg inline-style
+- [ ] add icons
 - [ ] add components overview page
 - [ ] layout dashboard view
 - [ ] config eslint/prettier

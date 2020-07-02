@@ -3,13 +3,14 @@
     {
       "id": 0,
       "name": "OG-2020",
-      "date-until": "2020-05-20",
+      "date_start": "2020-05-20",
+      "date_until": "2020-08-20",
       "revenue": 24000,
-      "revenue-percent": 50.0,
-      "processed-old-revenue-percent": 97.0,
-      "processed-old-revenue-n1": 2050.0,
-      "processed-old-revenue-n2": 9.43,
-      "customers-percent": 50.0,
+      "revenue_percent": 50.0,
+      "processed_old_revenue_percent": 97.0,
+      "processed_old_revenue_n1": 2050.0,
+      "processed_old_revenue_n2": 9.43,
+      "customers_percent": 50.0,
       "customers": [
         {
           "id": 0
@@ -183,7 +184,7 @@
           "id": 56
         }
       ],
-      "customers-new": [
+      "customers_new": [
         {
           "id": 0
         },
@@ -191,12 +192,12 @@
           "id": 1
         }
       ],
-      "customers-pop": [
+      "customers_pop": [
         {
           "id": 2
         }
       ],
-      "customers-increase": [
+      "customers_increase": [
         {
           "id": 3
         },
@@ -204,7 +205,7 @@
           "id": 4
         }
       ],
-      "customers-decrease": [
+      "customers_decrease": [
         {
           "id": 5
         },
@@ -215,22 +216,22 @@
           "id": 7
         }
       ],
-      "customers-clearingissue": [],
-      "revenue-target": 105300.0,
-      "revenue-until-old": -81300.0,
-      "customer-target": 200,
-      "customer-until-old": -144,
-      "customer-open": 143,
-      "online-n": 2000.0,
-      "online-n-customercount": 15,
-      "online-n-percent": 19.76,
-      "omp-n": 1000.0,
-      "omp-n-customer-count": 10,
-      "omp-n-percent": 12,
-      "customer-per-week-av": 19,
-      "customer-per-week-av-revenue": 7000.0,
-      "customer-per-week-av-target": 24,
-      "customer-per-week-av-target-revenue": 13500.0
+      "customers_clearingissue": [],
+      "revenue_target": 105300.0,
+      "revenue_until_old": -81300.0,
+      "customer_target": 200,
+      "customer_until_old": -144,
+      "customer_open": 143,
+      "online_n": 2000.0,
+      "online_n_customercount": 15,
+      "online_n_percent": 19.76,
+      "omp_n": 1000.0,
+      "omp_n_customer_count": 10,
+      "omp_n_percent": 12,
+      "customer_per_week_av": 19,
+      "customer_per_week_av_revenue": 7000.0,
+      "customer_per_week_av_target": 24,
+      "customer_per_week_av_target_revenue": 13500.0
     }
   ]
 }
