@@ -7,9 +7,15 @@
 
 - [x] define data in mock-data.json
 - [x] fetch data async on load
-- [ ] layout detail view
+- [x] layout detail view
+- [x] add css lib
+  - pure.css
+- [ ] render detail data
+- [ ] add open/close mechanics
+- [ ] add circle % diagram
+  - svg inline-style
+- [ ] add components overview page
 - [ ] layout dashboard view
-- [ ] add css lib
 - [ ] config eslint/prettier
 - [ ] write tests (for format component)
 - [ ] write demo graphQl-queries for dashboard-/detail-view each
