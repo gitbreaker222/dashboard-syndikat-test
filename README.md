@@ -10,6 +10,10 @@
 - [x] layout detail view
 - [x] add css lib
   - pure.css
+- [x] define css variables
+  - [x] colors
+  - font-families
+  - font-sizes
 - [ ] render detail data
 - [ ] add open/close mechanics
 - [ ] add circle % diagram

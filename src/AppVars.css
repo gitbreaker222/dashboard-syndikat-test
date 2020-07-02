@@ -1,0 +1,25 @@
+:root {
+  --nav-size: 3rem;
+
+  /* COLOR THEME: REGULAR LIGHT */
+  /* Palette and Shades */
+  /* A */
+  --color-a1: #303342;
+  --color-a2: #a0bdc3;
+  --color-a3: #cce7de;
+  /* B */
+  --color-b1: #c59855;
+  /* C */
+  --color-c1: #262626;
+  --color-c2: #7c7c7c; 
+  --color-c3: #b4b4b4; /* borders */
+  --color-c9: white;
+  /* Text and Background */
+  --color-primary: var(--color-a2);
+  --color-secondary: var(--color-b1);
+  --color-text-normal: var(--color-c1);
+  --color-bg-normal: var(--color-c9);
+  --color-text-contrast: var(--color-c9);
+  --color-bg-contrast: var(--color-c1);
+  /* COLOR THEME: REGULAR LIGHT END */
+}
