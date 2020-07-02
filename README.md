@@ -15,7 +15,7 @@
   - font-families
   - font-sizes
 - [ ] render detail data
-- [ ] add open/close mechanics
+- [x] add open/close mechanics
 - [ ] add circle % diagram
   - svg inline-style
 - [ ] add components overview page

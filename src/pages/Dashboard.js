@@ -8,12 +8,17 @@ const cleanupPlaceholder = () => { }
 
 export function Dashboard() {
   const [data, setData] = useState(null);
-  const [detailsData, setDetailsData] = useState({ id: 0 })
+  const [detailsId, setDetailsId] = useState(null)
+
+  const selectObject = (event) => {
+    event.stopPropagation()
+    const { id } = event.currentTarget.dataset
+    setDetailsId(id)
+  }
 
   useEffect(() => {
     if (!data) {
-      queryData()
-        .then(setData)
+      queryData().then(setData)
     }
     return cleanupPlaceholder
   }, [data]);
@@ -21,12 +26,22 @@ export function Dashboard() {
   return (
     <div className="Dashboard">
       <main className={`
-        ${cssIf(detailsData, '--isDetailsOpen')}
+        ${cssIf(detailsId, '--isDetailsOpen')}
         `}>
-        dashboard with list of objects
+        {data && data.objects && data.objects.map(_object => (
+          <button className="pure-button"
+            onClick={selectObject}
+            data-id={_object.id}
+            key={_object.id}
+          >
+            {_object.name}
+          </button>
+        ))}
       </main>
-      {!!detailsData && (
-        <ObjectDetails objectData={detailsData} />
+      {!!detailsId && (
+        <ObjectDetails objectData={detailsId}
+          onClose={() => { setDetailsId(null) }}
+        />
       )}
     </div>
   );
