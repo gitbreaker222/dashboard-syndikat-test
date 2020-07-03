@@ -1,0 +1,7 @@
+.App > nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+  box-shadow: 0 0 3px var(--color-c2);
+}

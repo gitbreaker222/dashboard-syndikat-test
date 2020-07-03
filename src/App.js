@@ -6,7 +6,16 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Dashboard></Dashboard>
+      <nav>
+        <button>Menu</button>
+        <div className="username">Manuela Beiser</div>
+        <div className="location">HOME</div>
+        <div className="logo">signHere</div>
+      </nav>
+
+      <div className="current-route">
+        <Dashboard></Dashboard>
+      </div>
     </div>
   );
 }

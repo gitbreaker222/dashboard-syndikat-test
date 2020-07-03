@@ -16,9 +16,9 @@
   - font-sizes
 - [x] render detail data
 - [x] add open/close mechanics
-- [ ] add circle % diagram
+- [x] add circle % diagram
   - svg inline-style
-- [ ] add icons
+- [x] add icons
 - [ ] add components overview page
 - [ ] layout dashboard view
 - [ ] config eslint/prettier
