@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { cssIf } from '../service/util'
 import { queryData } from '../service/data'
 import { Format } from '../components/format/Format'
+import { CircleDiagram } from '../components/circleDiagram/CircleDiagram'
 import { ObjectDetails } from '../components/objectDetails/ObjectDetails'
 import './Dashboard.css';
 
@@ -119,7 +120,14 @@ export function Dashboard() {
                 data-id={_object.id}
                 key={_object.id}
               >
-                {_object.name}
+                <CircleDiagram
+                  c1Percent={_object.processed_old_revenue_percent}
+                  c2Percent={_object.customers_percent}
+                  c3Percent={_object.revenue_percent}
+                />
+                <div className="object-name">
+                  {_object.name}
+                </div>
               </button>
             ))}
           </div>
