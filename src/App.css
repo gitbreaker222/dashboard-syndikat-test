@@ -1,7 +1,20 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+}
+
 .App > nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 3rem;
+  z-index: 9;
+  background: var(--color-bg-normal);
   box-shadow: 0 0 3px var(--color-c2);
+}
+
+.App .current-route {
+  flex: 1;
+  position: relative;
 }

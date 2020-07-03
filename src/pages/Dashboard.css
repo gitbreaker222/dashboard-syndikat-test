@@ -1,3 +1,43 @@
+.Dashboard {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(10rem, 20rem) 1fr;
+}
+
+.Dashboard aside {
+  box-shadow: 0 0 3px var(--color-c2);
+  z-index: 1;
+}
+
+.Dashboard main {
+  display: grid;
+  grid-gap: 1rem;
+  background: var(--color-c4);
+  padding: 1rem;
+}
+
+.Dashboard main .weekly-revenue,
+.Dashboard main .messages {
+  background: var(--color-bg-normal);
+  padding: 1rem;
+}
+.Dashboard .objects-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+.Dashboard .object-list {
+  flex: 1 0 100%;
+}
+.Dashboard .object-list button {
+  width: 10rem;
+  height: 10rem;
+  margin-right: 1rem;
+  background: var(--color-bg-normal);
+  box-shadow: 0 0 3px var(--color-c2);
+}
+
 .Dashboard main.--isDetailsOpen {
   filter: blur(1px)
 }
@@ -8,4 +48,5 @@
   right: 1rem;
   bottom: 1rem;
   left: 1rem;
+  z-index: 10;
 }

@@ -87,24 +87,43 @@ export function Dashboard() {
         <div className="highlight-info">
           Ihr umsatz diese Woche:
 
-          <Format pipes={['currency']}>
-            {20000}
-          </Format>
+          <h3>
+            <Format pipes={['currency']}>
+              {20000}
+            </Format>
+          </h3>
         </div>
       </aside>
 
       <main className={`
         ${cssIf(details, '--isDetailsOpen')}
-        `}>
-        {data && data.objects && data.objects.map(_object => (
-          <button className="pure-button"
-            onClick={selectObject}
-            data-id={_object.id}
-            key={_object.id}
-          >
-            {_object.name}
-          </button>
-        ))}
+        `}
+      >
+        <div className="weekly-revenue">
+          <h4>Wochenumsatz</h4>
+        </div>
+
+        <div className="messages">
+          <h4>Nachrichten</h4>
+        </div>
+
+        <div className="objects-box">
+          <h4>Ihre Objekte</h4>
+          <div class="legend">
+            legende
+          </div>
+          <div className="object-list">
+            {data && data.objects && data.objects.map(_object => (
+              <button className="pure-button"
+                onClick={selectObject}
+                data-id={_object.id}
+                key={_object.id}
+              >
+                {_object.name}
+              </button>
+            ))}
+          </div>
+        </div>
       </main>
       {!!details && (
         <ObjectDetails data={details}
