@@ -51,17 +51,17 @@ export function ObjectDetails(props) {
         </div>
 
         <div className="time -info">
-          <i>T</i> {date_until}
-          <span className="-remaining">
+          ⏲ {date_until}
+          <div className="-remaining">
             Noch x Wochen
-          </span>
+          </div>
         </div>
         <div className="time -meter"></div>
 
         <button className="close"
           onClick={onClose}
         >
-          <i>X</i>
+          <span role="img" aria-label="close">❎</span>
         </button>
       </header>
 
@@ -142,7 +142,7 @@ export function ObjectDetails(props) {
         </div>
       </div>
       <div className={`${css.box} ${css.a4}`}>
-        <div>Kunden/Woche</div>
+        <div className="-title">Kunden/Woche</div>
         <div>
           <sub>Aktuell</sub>
           <h3>
@@ -172,7 +172,7 @@ export function ObjectDetails(props) {
       </div>
 
       <div className={`${css.box} ${css.diagram}`}>
-        D
+        Diagram
       </div>
 
       <div className={`${css.box} ${css.customers}`}>

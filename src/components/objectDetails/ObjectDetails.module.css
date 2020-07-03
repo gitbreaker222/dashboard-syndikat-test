@@ -1,17 +1,61 @@
 /* LAYOUT */
 .root {
+  --headerY: 3rem;
+
   display: grid;
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-rows: var(--headerY) repeat(4, 1fr) var(--headerY);
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 1px;
 }
+@media (orientation:portrait) {
+  .root {
+    grid-template-rows: var(--headerY) repeat(5, 1fr) var(--headerY);
+  }
+}
 
 .box {
-  padding: 1rem;
   box-shadow: 0 0 0 1px var(--color-c3);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.box > :global(*) {
+  padding: .5rem;
 }
 header.box {
-  grid-area: 1 / 1 / span 1 / -1
+  grid-area: 1 / 1 / span 1 / -1;
+  position: relative;
+}
+header.box :global(.title) {
+  flex: 1;
+}
+header.box :global(.time .-remaining) {
+  color: var(--color-b1);
+}
+header.box :global(.time.-meter) {
+  --process: 77%;
+  
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--color-b1) 0%,
+    var(--color-b1) var(--process),
+    transparent calc(var(--process) + 2%),
+    transparent 100%
+  );
+  padding: 0;
+}
+header.box :global(.close) {
+  align-self: stretch;
+  border: none;
+  width: var(--headerY);
+  height: var(--headerY);
+  box-shadow: 0 0 0 1px var(--color-c3);
 }
 footer.box {
   grid-area: -2 / 1 / span 1 / -1
@@ -29,14 +73,44 @@ footer.box {
 .box.a4 {
   grid-area: 4 / 2 / span 1 / span 1;
 }
-
+@media (orientation:portrait) {
+  .box.a1 {
+    grid-area: 2 / 1 / span 1 / span 3;
+  }
+  .box.a2 {
+    grid-area: 3 / 1 / span 1 / span 3;
+  }
+  .box.a3 {
+    grid-area: 4 / 1 / span 1 / span 3;
+  }
+  .box.a4 {
+    grid-area: 5 / 1 / span 1 / span 3;
+  }
+}
 
 .box.diagram {
   grid-area: 2 / 3 / span 3 / span 3;
 }
+@media (orientation:portrait) {
+  .box.diagram {
+    grid-area: 2 / 4 / span 4 / span 2;
+  }
+}
 
 .box.customers {
-  grid-area: 5 / 1 / span 1 / -1;
+  grid-area: -3 / 1 / span 1 / -1;
+  padding: 0;
+}
+
+.box.customers > :global(div:not(.separator)) {
+  flex: 1 1 0%;
+  padding: 1rem;
+}
+.box.customers :global( .separator) {
+  width: 1px;
+  height: 75%;
+  background: var(--color-c3);
+  padding: 0;
 }
 /* LAYOUT END*/
 
