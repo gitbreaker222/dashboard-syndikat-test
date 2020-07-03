@@ -38,9 +38,8 @@
   margin-right: 1rem;
   background: var(--color-bg-normal);
   box-shadow: 0 0 3px var(--color-c2);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
 }
 .Dashboard .object-list .object-name {
   position: absolute;

@@ -106,9 +106,8 @@ footer.box {
   position: absolute;
   right: 0;
   bottom: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
 }
   .diagramBox .inner {
     position: absolute;

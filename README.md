@@ -1,12 +1,11 @@
 
 # Dashboard Syndikat Test
 
-[Task description]('./docs/task.pdf')
+[Task description](./docs/task.pdf)
 
 ## Current state
 
-[preview]('./docs/2020-07-04%2000-13%20preview.webm')  
-![preview](./docs/2020-07-04%2000-13%20preview.webm)
+[preview](./docs/2020-07-04%2000-13%20preview.webm)
 
 ## TODO
 
