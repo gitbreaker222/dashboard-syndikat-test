@@ -1,7 +1,12 @@
 
 # Dashboard Syndikat Test
 
-[Task description]('./docs/task.pdf)
+[Task description]('./docs/task.pdf')
+
+## Current state
+
+[preview]('./docs/2020-07-04%2000-13%20preview.webm')  
+![preview](./docs/2020-07-04%2000-13%20preview.webm)
 
 ## TODO
 
@@ -21,7 +26,10 @@
   - svg inline-style
 - [x] add icons
 - [ ] add components overview page
-- [ ] layout dashboard view
+- [x] layout dashboard view
+  - [ ] week diagram
+  - [ ] messages
+  - [ ] objects list details and legend
 - [ ] config eslint/prettier
 - [ ] write tests (for format component)
 - [ ] write demo graphQl-queries for dashboard-/detail-view each
