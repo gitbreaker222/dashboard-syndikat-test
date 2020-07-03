@@ -15,6 +15,7 @@
   - font-families
   - font-sizes
 - [x] render detail data
+  - [ ] calculate remaining days
 - [x] add open/close mechanics
 - [x] add circle % diagram
   - svg inline-style

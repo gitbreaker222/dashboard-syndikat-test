@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { cssIf } from '../service/util'
 import { queryData } from '../service/data'
+import { Format } from '../components/format/Format'
 import { ObjectDetails } from '../components/objectDetails/ObjectDetails'
 import './Dashboard.css';
 
@@ -13,7 +14,7 @@ export function Dashboard() {
   const selectObject = async (event) => {
     event.stopPropagation()
     const { id } = event.currentTarget.dataset
-    const data = await queryData(`{
+    const staticData = await queryData(`{
       objects(filter: {id: ${id}}) {
         id
         name
@@ -59,14 +60,18 @@ export function Dashboard() {
         customer_per_week_av_target_revenue
       }
     }`)
-    setDetails(data)
+
+    setDetails(staticData.objects.find(item => {
+      console.log(item.id, id);
+
+      return item.id.toString() === id
+    }))
   }
 
   useEffect(() => {
     if (!data) {
       queryData().then(result => {
         setData(result);
-        setDetails({}) //TODO revert dev
       })
     }
     return cleanupPlaceholder
@@ -74,6 +79,20 @@ export function Dashboard() {
 
   return (
     <div className="Dashboard">
+      <aside>
+        <div className="greeting">
+          HALLO FRAU BEISER
+        </div>
+
+        <div className="highlight-info">
+          Ihr umsatz diese Woche:
+
+          <Format pipes={['currency']}>
+            {20000}
+          </Format>
+        </div>
+      </aside>
+
       <main className={`
         ${cssIf(details, '--isDetailsOpen')}
         `}>
@@ -88,7 +107,7 @@ export function Dashboard() {
         ))}
       </main>
       {!!details && (
-        <ObjectDetails data={data.objects[0]}
+        <ObjectDetails data={details}
           onClose={() => { setDetails(null) }}
         />
       )}
