@@ -1,4 +1,5 @@
 import React from 'react';
+import css from './Format.module.css';
 
 const _pipes = {
   JSON: 'JSON',
@@ -20,6 +21,8 @@ export function Format(props) {
   }
   /* --- */
 
+  let prefix = '';
+  let postfix = '';
   const result = pipes.reduce((result, flag) => {
     flag = flag.toUpperCase();
     const region = 'de';
@@ -27,30 +30,31 @@ export function Format(props) {
 
     switch (flag) {
       case _pipes.JSON:
-        //expect object
         result = JSON.stringify(children, '', 2)
         result = <pre>{result}</pre>
         break;
 
       case _pipes.CURRENCY:
-        //expect number
         result = result.toLocaleString(region, { style: 'currency', currency });
         break;
 
       case _pipes.CUSTOMERS:
-        //expect number
-        result = result + ' Ω';
+        result = result + ' '
+        postfix = <img
+          src="/icons/user-solid.svg"
+          alt="user-icon"
+          className={css.icon}
+        />;
         break;
 
       case _pipes.PERCENT:
-        //expect number
         result = result.toPrecision(3);
-        result = result + ' %'
+        postfix = ' %'
         break;
 
       case _pipes.AVERAGE:
-        //expect number or string
-        result = 'Ø ' + result
+        prefix = 'Ø '
+        break;
 
       default:
         break;
@@ -60,7 +64,7 @@ export function Format(props) {
 
   return (
     <span className={`Format ${pipes.join(' ')} ${classNames}`}>
-      {result}
+      {prefix}{result}{postfix}
     </span>
   )
 }
