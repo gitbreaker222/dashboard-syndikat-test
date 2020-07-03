@@ -1,5 +1,6 @@
 import React from 'react'
 import { Format } from '../format/Format'
+import { CircleDiagram } from '../circleDiagram/CircleDiagram'
 import css from './ObjectDetails.module.css'
 
 
@@ -58,7 +59,7 @@ export function ObjectDetails(props) {
         </div>
         <div className="time -meter"></div>
 
-        <button className="close"
+        <button className="pure-button close"
           onClick={onClose}
         >
           <span role="img" aria-label="close">❎</span>
@@ -172,7 +173,26 @@ export function ObjectDetails(props) {
       </div>
 
       <div className={`${css.box} ${css.diagram}`}>
-        Diagram
+        <div className={css.legend}>
+          <div>Umsatz</div>
+          <div>Kunden</div>
+          <div>Verarbeiteter Altumsatz</div>
+          <Format pipes={['currency']}>
+            {processed_old_revenue_n1}</Format>
+          <Format pipes={['percent']}>
+            {processed_old_revenue_n2}</Format>
+        </div>
+        <div className={css.diagramBox}>
+          <CircleDiagram
+            c1Percent={processed_old_revenue_percent}
+            c2Percent={customers_percent}
+            c3Percent={revenue_percent}
+          />
+          <div className={css.inner}>
+            <Format pipes={['currency']}>{revenue}</Format>
+            <Format pipes={['customers']}>{customers.length}</Format>
+          </div>
+        </div>
       </div>
 
       <div className={`${css.box} ${css.customers}`}>

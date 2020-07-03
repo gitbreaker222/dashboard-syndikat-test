@@ -7,7 +7,7 @@
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 1px;
 }
-@media (orientation:portrait) {
+@media (orientation:portrait) and (max-width: 768px) {
   .root {
     grid-template-rows: var(--headerY) repeat(5, 1fr) var(--headerY);
   }
@@ -73,7 +73,7 @@ footer.box {
 .box.a4 {
   grid-area: 4 / 2 / span 1 / span 1;
 }
-@media (orientation:portrait) {
+@media (orientation:portrait) and (max-width: 768px) {
   .box.a1 {
     grid-area: 2 / 1 / span 1 / span 3;
   }
@@ -90,11 +90,67 @@ footer.box {
 
 .box.diagram {
   grid-area: 2 / 3 / span 3 / span 3;
+  position: relative;
+  flex-flow: column;
+  align-items: flex-start;
 }
-@media (orientation:portrait) {
+@media (orientation:portrait) and (max-width: 768px) {
   .box.diagram {
     grid-area: 2 / 4 / span 4 / span 2;
   }
+}
+.box.diagram :global(svg) {
+}
+.box.diagram .diagramBox {
+  width: 75%;
+  position: absolute;
+  right: 0;
+  bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  .diagramBox .inner {
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    font-size: 2rem;
+  }
+  @media (orientation:portrait) and (max-width: 768px) {
+    .diagramBox .inner {
+      top: -2em;
+      align-items: flex-end;
+    }
+  }
+    .inner :global(.currency) {
+      color: var(--color-a3);
+      text-shadow: 0.2px 0px var(--color-bg-contrast);
+    }
+    .inner :global(.customers) {
+      color: var(--color-a1);
+    }
+.box.diagram .legend {
+  display: flex;
+  flex-flow: column;
+}
+.box.diagram .legend > *:before {
+  content: '';
+  display: inline-block;
+  margin-right: .5em;
+  margin-bottom: .5em;
+  width: 2.5em;
+  height: 1.5em;
+  vertical-align: middle;
+}
+.box.diagram .legend > *:nth-child(1):before {
+  background: var(--color-a3);
+}
+.box.diagram .legend > *:nth-child(2):before {
+  background: var(--color-a1);
+}
+.box.diagram .legend > *:nth-child(3):before {
+  background: var(--color-a2);
 }
 
 .box.customers {
@@ -105,6 +161,7 @@ footer.box {
 .box.customers > :global(div:not(.separator)) {
   flex: 1 1 0%;
   padding: 1rem;
+  align-self: flex-start;
 }
 .box.customers :global( .separator) {
   width: 1px;
