@@ -110,8 +110,10 @@ export function Dashboard() {
 
         <div className="objects-box">
           <h4>Ihre Objekte</h4>
-          <div class="legend">
-            legende
+          <div className="legend">
+            <div>Verarbeiteter Altumsatz</div>
+            <div>Kunden</div>
+            <div>Umsatz</div>
           </div>
           <div className="object-list">
             {data && data.objects && data.objects.map(_object => (
@@ -128,6 +130,9 @@ export function Dashboard() {
                 <div className="object-name">
                   {_object.name}
                 </div>
+                <span className="date">
+                  {_object.date_until}
+                </span>
               </button>
             ))}
           </div>

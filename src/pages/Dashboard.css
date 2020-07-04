@@ -3,16 +3,18 @@
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-columns: minmax(10rem, 20rem) 1fr;
+  grid-template-columns: minmax(10rem, auto) 1fr;
 }
 
 .Dashboard aside {
   box-shadow: 0 0 3px var(--color-c2);
   z-index: 1;
+  padding: 1rem;
 }
 
 .Dashboard main {
   display: grid;
+  grid-template: 1fr auto / 1fr 1fr;
   grid-gap: 1rem;
   background: var(--color-c4);
   padding: 1rem;
@@ -26,23 +28,57 @@
 .Dashboard .objects-box {
   display: flex;
   flex-wrap: wrap;
+  grid-column: 1 / -1;
+  align-content: center;
+  max-width: 100%;
 }
+.Dashboard .objects-box h4 {
+  flex: 1;
+  margin-top: 0;
+}
+  .objects-box .legend {
+    display: grid;
+    grid-template-columns: repeat(3, 10ch);
+    grid-gap: 5ch;
+    margin-top: 1em;
+  }
+  .objects-box .legend > *:before {
+    content: '';
+    position: absolute;
+    width: 5ch;
+    height: .8em;
+    transform: translate(-1em, -1em);
+  }
+  .objects-box .legend > *:nth-child(1):before {
+    background: var(--color-a2);
+  }
+  .objects-box .legend > *:nth-child(2):before {
+    background: var(--color-a1);
+  }
+  .objects-box .legend > *:nth-child(3):before {
+    background: var(--color-a3);
+  }
 .Dashboard .object-list {
   flex: 1 0 100%;
   display: flex;
   overflow: auto;
+  padding: .5rem;
 }
 .Dashboard .object-list button {
-  width: 10rem;
-  height: 10rem;
+  min-width: 16rem;
+  height: 16rem;
   margin-right: 1rem;
   background: var(--color-bg-normal);
   box-shadow: 0 0 3px var(--color-c2);
   display: grid;
   place-items: center;
 }
+.Dashboard .object-list svg,
 .Dashboard .object-list .object-name {
-  position: absolute;
+  grid-area: 1 / 1 / -1 / -1;
+}
+.Dashboard .object-list .date {
+  place-self: end;
 }
 
 .Dashboard main.--isDetailsOpen {
