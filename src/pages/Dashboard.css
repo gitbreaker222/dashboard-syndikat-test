@@ -65,8 +65,7 @@
   padding: .5rem;
 }
 .Dashboard .object-list button {
-  min-width: 16rem;
-  height: 16rem;
+  flex: 0 0 16rem;
   margin-right: 1rem;
   background: var(--color-bg-normal);
   box-shadow: 0 0 3px var(--color-c2);

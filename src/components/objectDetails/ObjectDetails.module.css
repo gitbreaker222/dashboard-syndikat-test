@@ -22,10 +22,14 @@
 }
 .box > :global(*) {
   padding: .5rem;
+  flex: 1;
 }
 header.box {
   grid-area: 1 / 1 / span 1 / -1;
   position: relative;
+}
+header.box > :global(*) {
+  flex: 0 0 auto;
 }
 header.box :global(.title) {
   flex: 1;
@@ -88,6 +92,16 @@ footer.box {
   .box.a4 {
     grid-area: 5 / 1 / span 1 / span 3;
   }
+  .box.a4 :global(.-title) {
+    flex: 1 0 100%;
+  }
+}
+@media (orientation:landscape) {
+  .box.a3,
+  .box.a4 {
+    flex-flow: column;
+    align-items: flex-start;
+  }
 }
 
 .box.diagram {
@@ -103,6 +117,7 @@ footer.box {
 }
 .box.diagram .diagramBox {
   width: 75%;
+  max-width: 22rem;
   position: absolute;
   right: 0;
   bottom: 1rem;
@@ -119,6 +134,7 @@ footer.box {
   @media (orientation:portrait) and (max-width: 768px) {
     .diagramBox .inner {
       top: -2em;
+      right: 1rem;
       align-items: flex-end;
     }
   }
@@ -163,7 +179,7 @@ footer.box {
   align-self: flex-start;
 }
 .box.customers :global( .separator) {
-  width: 1px;
+  flex: 0 0 1px;
   height: 75%;
   background: var(--color-c3);
   padding: 0;
