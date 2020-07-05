@@ -1,6 +1,7 @@
 import React from 'react'
 import { getTimeDifference } from '../../service/util';
 import { Format } from '../format/Format'
+import { Progress } from '../progress/Progress'
 import { CircleDiagram } from '../circleDiagram/CircleDiagram'
 import css from './ObjectDetails.module.css'
 
@@ -61,7 +62,9 @@ export function ObjectDetails(props) {
             </Format>
           </div>
         </div>
-        <div className="time -meter"></div>
+        <Progress date_start={date_start}
+          date_until={date_until}>
+        </Progress>
 
         <button className="pure-button close"
           onClick={onClose}

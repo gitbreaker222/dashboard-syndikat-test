@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { cssIf } from '../service/util'
 import { queryData } from '../service/data'
 import { Format } from '../components/format/Format'
+import { Progress } from '../components/progress/Progress'
 import { CircleDiagram } from '../components/circleDiagram/CircleDiagram'
 import { ObjectDetails } from '../components/objectDetails/ObjectDetails'
 import './Dashboard.css';
@@ -133,6 +134,10 @@ export function Dashboard() {
                 <span className="date">
                   {_object.date_until}
                 </span>
+                <Progress
+                  date_start={_object.date_start}
+                  date_until={_object.date_until}>
+                </Progress>
               </button>
             ))}
           </div>

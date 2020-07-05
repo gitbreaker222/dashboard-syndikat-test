@@ -1,0 +1,11 @@
+.root {
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--color-b1) 0%,
+    var(--color-b1) var(--process), 
+    var(--color-c4) calc(var(--process) + 2%), 
+    var(--color-c4) 100%
+  );
+}

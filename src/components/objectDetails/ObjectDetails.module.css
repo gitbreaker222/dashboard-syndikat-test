@@ -37,21 +37,12 @@ header.box :global(.title) {
 header.box :global(.time .-remaining) {
   color: var(--color-b1);
 }
-header.box :global(.time.-meter) {
+header.box :global(.Progress) {
   --process: 77%;
   
   position: absolute;
   left: 0;
   bottom: 0;
-  height: 2px;
-  width: 100%;
-  background: linear-gradient(
-    90deg,
-    var(--color-b1) 0%,
-    var(--color-b1) var(--process),
-    transparent calc(var(--process) + 2%),
-    transparent 100%
-  );
   padding: 0;
 }
 header.box :global(.close) {
