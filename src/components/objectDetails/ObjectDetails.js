@@ -1,4 +1,5 @@
 import React from 'react'
+import { getTimeDifference } from '../../service/util';
 import { Format } from '../format/Format'
 import { CircleDiagram } from '../circleDiagram/CircleDiagram'
 import css from './ObjectDetails.module.css'
@@ -54,7 +55,10 @@ export function ObjectDetails(props) {
         <div className="time -info">
           ⏲ {date_until}
           <div className="-remaining">
-            Noch x Wochen
+            Noch&ensp;
+            <Format pipes={['timespan']}>
+              {getTimeDifference(date_until)}
+            </Format>
           </div>
         </div>
         <div className="time -meter"></div>

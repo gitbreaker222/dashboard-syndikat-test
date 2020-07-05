@@ -6,7 +6,8 @@ const _pipes = {
   CURRENCY: 'CURRENCY',
   CUSTOMERS: 'CUSTOMERS',
   PERCENT: 'PERCENT',
-  AVERAGE: 'AVERAGE'
+  AVERAGE: 'AVERAGE',
+  TIMESPAN: 'TIMESPAN',
 }
 
 export function Format(props) {
@@ -54,6 +55,30 @@ export function Format(props) {
 
       case _pipes.AVERAGE:
         prefix = 'Ø '
+        break;
+
+      case _pipes.TIMESPAN:
+        const oneDay = 86400000
+        let unit = 'Stunden'
+        result = children / 1000 / 60 / 60
+        if (children > oneDay) {
+          result = result / 24
+          unit = 'Tage'
+        }
+        if (children > oneDay * 7) {
+          result = result / 7
+          unit = 'Wochen'
+        }
+        if (children > oneDay * 30) {
+          result = result * 7 / 30
+          unit = 'Monate'
+        }
+        if (children > oneDay * 365) {
+          result = result * 30 / 365
+          unit = 'Monate'
+        }
+        result = result.toLocaleString(undefined, { maximumFractionDigits: 1 })
+        result = `${result} ${unit}`
         break;
 
       default:
